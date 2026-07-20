@@ -50,12 +50,25 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 개별 로그만 보면 서로 관계없는 이벤트처럼 보일 수 있습니다. **SENTINEL-OPS**는 이 이벤트들을 OpenTelemetry 기반 파이프라인으로 수집·정규화하고, `시간 · IP · 계정 · 리소스` 관계를 분석하여 **하나의 연결된 인시던트**로 재구성합니다.
 
+
+---
+
+## 🎬 Demo
+
+<div align="center">
+
+<img src="./assets/demo.gif" width="900" alt="SENTINEL-OPS Page Demo" />
+
+</div>
 <div align="center">
 
 <!-- hero.gif 업로드 후 사용하세요. -->
 <img src="./assets/hero.gif" width="900" alt="SENTINEL-OPS Architecture Demo" />
 
+---
 </div>
+
+
 
 ### 문제와 해결 방식
 
@@ -146,15 +159,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 </tr>
 </table>
 
----
 
-## 🎬 Demo
-
-<div align="center">
-
-<img src="./assets/demo.gif" width="900" alt="SENTINEL-OPS Page Demo" />
-
-</div>
 
 ---
 
@@ -369,6 +374,15 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 <img src="https://img.shields.io/badge/Traefik_v3-24A1C1?style=for-the-badge&logo=traefikproxy&logoColor=white" alt="Traefik" />
 <img src="https://img.shields.io/badge/Falco-00AEC7?style=for-the-badge" alt="Falco" />
 <img src="https://img.shields.io/badge/OWASP_Juice_Shop-000000?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP Juice Shop" />
+</p>
+
+### Monitoring / Observability
+
+<p>
+  <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
+  <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka">
+  <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack">
+  <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
 </p>
 
 ### ETC
