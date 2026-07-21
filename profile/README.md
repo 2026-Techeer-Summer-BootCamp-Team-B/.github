@@ -40,8 +40,13 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 ---
 
 ## 📌 프로젝트 소개
+<div align="center">
+  
+<img src="./assets/sentinel-ops-architecture-demo.gif" width="950" alt="sentinel-ops-architecture-demo" />
 
-컨테이너 환경에서 하나의 공격은 여러 계층에 나뉜 흔적으로 남습니다.
+</div>
+
+### 컨테이너 환경에서 하나의 공격은 여러 계층에 나뉜 흔적으로 남습니다.
 
 - **WAF**에는 SQL Injection, XSS, Bad Bot과 같은 악성 요청이 남습니다.
 - **WAS**에는 정찰성 요청과 비정상적인 엔드포인트 접근 기록이 남습니다.
@@ -57,13 +62,13 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 <div align="center">
 
-<img src="./assets/demo.gif" width="900" alt="SENTINEL-OPS Page Demo" />
+<img src="./assets/DualMonitorTour.gif" width="950" alt="SENTINEL-OPS Page Demo" />
 
 </div>
 <div align="center">
 
 <!-- hero.gif 업로드 후 사용하세요. -->
-<img src="./assets/hero.gif" width="900" alt="SENTINEL-OPS Architecture Demo" />
+<img src="./assets/.gif" width="950" alt="SENTINEL-OPS Architecture Demo" />
 
 ---
 </div>
@@ -224,7 +229,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 전체 로그 수, 위험도, 활성 탐지 소스, 공격 발원지, 최근 이벤트와 상관 흐름을 한 화면에서 확인합니다.
 
 <div align="center">
-<img src="./assets/overview.png" width="850" alt="Overview Dashboard" />
+<img src="./assets/overview.png" width="950" alt="Overview Dashboard" />
 </div>
 
 <br/>
@@ -234,7 +239,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 연관 이벤트를 시간순 공격 스토리라인으로 확인하고, MITRE ATT&CK 태그·상태·정오답 판정을 관리합니다.
 
 <div align="center">
-<img src="./assets/incident.png" width="850" alt="Incident Dashboard" />
+<img src="./assets/incident.png" width="950" alt="Incident Dashboard" />
 </div>
 
 <br/>
@@ -244,7 +249,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전체 보안 파이프라인의 상태를 확인합니다.
 
 <div align="center">
-<img src="./assets/infrastructure.png" width="850" alt="Infrastructure Dashboard" />
+<img src="./assets/infrastructure.png" width="950" alt="Infrastructure Dashboard" />
 </div>
 
 <br/>
@@ -254,7 +259,7 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 사용자·보호 대상·예외 IP·시나리오 룰·알림 등급·보존 정책을 통합 관리합니다.
 
 <div align="center">
-<img src="./assets/admin.png" width="850" alt="Admin Dashboard" />
+<img src="./assets/admin.png" width="950" alt="Admin Dashboard" />
 </div>
 
 <details>
@@ -299,7 +304,7 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 ## 🗃️ Data Architecture
 
 <div align="center">
-<img src="./assets/erd.png" width="900" alt="SENTINEL-OPS ERD" />
+<img src="./assets/image.png" width="950" alt="SENTINEL-OPS ERD" />
 </div>
 
 | 저장소 | 역할 |
@@ -331,38 +336,39 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 
 ---
 
-## 🧰 Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
 
 <p>
-<img src="https://img.shields.io/badge/React_18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
 <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
 <img src="https://img.shields.io/badge/Recharts-22B5BF?style=for-the-badge" alt="Recharts" />
 <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white" alt="Three.js" />
 <img src="https://img.shields.io/badge/Google_Maps-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Google Maps" />
 <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+<img src="https://img.shields.io/badge/Remotion-000000?style=for-the-badge&logo=remotion&logoColor=white" alt="Remotion" />
 </p>
 
 ### Backend & Streaming
 
 <p>
-<img src="https://img.shields.io/badge/Python_3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
 <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
-<img src="https://img.shields.io/badge/Pydantic_v2-E92063?style=for-the-badge&logo=pydantic&logoColor=white" alt="Pydantic" />
+<img src="https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white" alt="Pydantic" />
 <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Kafka" />
 <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
-<img src="https://img.shields.io/badge/Gemini_API-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini API" />
 </p>
 
 ### Database & Search
 
 <p>
-<img src="https://img.shields.io/badge/PostgreSQL_16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-<img src="https://img.shields.io/badge/OpenSearch_2.19-005EB8?style=for-the-badge&logo=opensearch&logoColor=white" alt="OpenSearch" />
-<img src="https://img.shields.io/badge/ClickHouse_26.4-FFCC01?style=for-the-badge&logo=clickhouse&logoColor=black" alt="ClickHouse" />
-<img src="https://img.shields.io/badge/Redis_7-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/OpenSearch-005EB8?style=for-the-badge&logo=opensearch&logoColor=white" alt="OpenSearch" />
+<img src="https://img.shields.io/badge/ClickHouse-FFCC01?style=for-the-badge&logo=clickhouse&logoColor=black" alt="ClickHouse" />
+<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
+<img src="https://img.shields.io/badge/Data%20Prepper-005EB8?style=for-the-badge" alt="Data Prepper" />
 </p>
 
 ### Infrastructure & Security
@@ -371,29 +377,43 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
 <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
 <img src="https://img.shields.io/badge/Helm-0F1689?style=for-the-badge&logo=helm&logoColor=white" alt="Helm" />
-<img src="https://img.shields.io/badge/Traefik_v3-24A1C1?style=for-the-badge&logo=traefikproxy&logoColor=white" alt="Traefik" />
+<img src="https://img.shields.io/badge/Traefik-24A1C1?style=for-the-badge&logo=traefikproxy&logoColor=white" alt="Traefik" />
 <img src="https://img.shields.io/badge/Falco-00AEC7?style=for-the-badge" alt="Falco" />
-<img src="https://img.shields.io/badge/OWASP_Juice_Shop-000000?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP Juice Shop" />
 </p>
 
 ### Monitoring / Observability
 
 <p>
-  <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
-  <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka">
-  <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack">
-  <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
+<img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" />
+<img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus" />
+<img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
+<img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka">
+<img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack">
+<img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
 </p>
 
-### ETC
-
+### AI
 <p>
+<img src="https://img.shields.io/badge/Gemini_API-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini API" />
+</p>
+
+### Security Testing
+<p>
+<img src="https://img.shields.io/badge/OWASP_Juice_Shop-000000?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP Juice Shop" />
+</p>
+
+### Development & Collaboration
+<p>
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
-<img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white">
 <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white">
 <img src="https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white">
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
 </p>
+
+
+---
+
 
 ## 📦 Repositories
 
