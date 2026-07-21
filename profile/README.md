@@ -16,30 +16,26 @@ waf.png, was.png, falco.png, k8s-audit.png
 
 # SENTINEL-OPS
 
+
 ### 흩어진 보안 로그를 연결된 하나의 공격 시나리오로 재구성하는 실시간 SIEM 플랫폼
+
 
 WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<br/>
 시간 · IP · 계정 · 리소스 기반 상관분석으로 위협을 조기에 탐지합니다.
 
 <br/>
 
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=white)](#-tech-stack)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Python_3.11-009688?style=flat-square&logo=fastapi&logoColor=white)](#-tech-stack)
-[![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-OTLP-000000?style=flat-square&logo=opentelemetry&logoColor=white)](#-tech-stack)
-[![Kafka](https://img.shields.io/badge/Apache_Kafka-Event_Streaming-231F20?style=flat-square&logo=apachekafka&logoColor=white)](#-tech-stack)
-[![Kubernetes](https://img.shields.io/badge/Kubernetes-k3d_%2B_Helm-326CE5?style=flat-square&logo=kubernetes&logoColor=white)](#-tech-stack)
-[![Falco](https://img.shields.io/badge/Falco-Runtime_Security-00AEC7?style=flat-square)](#-tech-stack)
 
-<br/>
 
-[**Central SIEM 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR) ·
-[**Target 서버 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b)
+
+[**📦 Central SIEM 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR) ·
+[**🖥️ Target 서버 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b)
 
 </div>
 
 ---
 
-## 📌 프로젝트 소개
+## 🎯 Project Overview
 <div align="center">
   
 <img src="./assets/sentinel-ops-architecture-demo.gif" width="950" alt="sentinel-ops-architecture-demo" />
@@ -75,7 +71,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 
 
-### 문제와 해결 방식
+## ⚖️ Challenges & Solutions
 
 | 기존 문제 | SENTINEL-OPS의 해결 방식 |
 | --- | --- |
@@ -86,11 +82,11 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 ---
 
-## ✨ 핵심 기능
+## ✨ Key Features
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<table width="100%">
+  <tr>
+    <td width="33%" valign="top">
 
 ### 🔭 다계층 로그 통합 수집
 
@@ -101,24 +97,24 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 - OpenTelemetry OTLP 기반 실시간 전달
 
 </td>
-<td width="50%" valign="top">
+
+<td width="33%" valign="top">
 
 ### 🧩 시나리오 상관분석
 
 - Threshold·Sequence 룰 지원
 - 32종 시나리오 룰 평가
 - 이벤트 자동 생성·병합
-- MITRE ATT&CK 전술·기법 태깅
-- 시간·IP·계정·리소스 기반 관계 분석
+- MITRE ATT&CK 자동 태깅
+- 시간·IP·계정·리소스 관계 분석
 
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+
+<td width="33%" valign="top">
 
 ### 📊 실시간 보안 대시보드
 
-- 보안 KPI와 로그 추이
+- 보안 KPI 및 로그 추이
 - GeoIP 기반 공격 발원지 지도
 - 인시던트 공격 스토리라인
 - 실시간 이벤트 및 Activity Flow
@@ -126,42 +122,45 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 - 드래그 앤 드롭 커스텀 위젯
 
 </td>
-<td width="50%" valign="top">
+  </tr>
+
+  <tr>
+    <td valign="top">
 
 ### 🚨 인시던트 운영 및 대응
 
-- `open → investigating → closed` 상태 관리
-- True Positive / False Positive 판정
+- `open → investigating → closed`
+- True / False Positive 판정
 - IP 차단·해제 및 감사 이력
 - Critical 등급 실시간 알림
 - PDF·CSV 인시던트 리포트
 
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+
+<td valign="top">
 
 ### 🤖 AI 보안 리포트
 
 - Gemini 기반 탐지 트렌드 요약
-- 공격 흐름과 예상 영향 설명
-- 권장 대응 조치 생성
-- 일간·주간 보안 리포트
+- 공격 흐름 및 영향 분석
+- 권장 대응 방안 생성
+- 일간·주간 리포트
 - Slack·Discord 연동
 
 </td>
-<td width="50%" valign="top">
+
+<td valign="top">
 
 ### 🛡️ Target 보안 노드
 
-- Juice Shop 기반 공격 대상 환경
-- Detection / Prevention WAF 모드
-- SQLi·XSS·Command Injection·Path Traversal 탐지
-- Bad Bot·Rate Limiting·Brute Force·CORS 위반 탐지
-- Falco·K8s Audit·WAS 로그 중앙 전송
+- OWASP Juice Shop 기반 테스트 환경
+- Detection / Prevention WAF
+- SQLi · XSS · Command Injection · Path Traversal 탐지
+- Bad Bot · Rate Limiting · Brute Force · CORS 위반 탐지
+- Falco · K8s Audit · WAS 로그 중앙 전송
 
 </td>
-</tr>
+  </tr>
 </table>
 
 
@@ -171,58 +170,37 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 ## 🔄 End-to-End Security Flow
 
 ```text
-┌──────────────────── Target Security Node ────────────────────┐
-│                                                              │
-│ Browser                                                      │
-│   ├──▶ FastAPI WAF ───────────────▶ WAF Detection Log      │
-│   └──▶ Nginx + Juice Shop ─────────▶ WAS Access Log        │
-│                                                              │
-│ Falco DaemonSet ───────────────────▶ Runtime Security Log   │
-│ Kubernetes API Server ─────────────▶ Audit Log              │
-│                                                              │
-└──────────────────────────────┬───────────────────────────────┘
-                               │ OTLP(gRPC/HTTP)
-                               ▼
-┌──────────────────────── Central SIEM ────────────────────────┐
-│ OpenTelemetry Collector                                      │
-│          │                                                   │
-│          ▼                                                   │
-│ Kafka Source Topics                                          │
-│          │                                                   │
-│          ▼                                                   │
-│ Normalizer                                                   │
-│ Dedupe → Parsing → ECS Normalization → GeoIP Enrichment      │
-│          │                                                   │
-│          ▼                                                   │
-│ events.normalized                                            │
-│    ┌───────────────┬─────────────────┬─────────────────┐     │
-│    ▼               ▼                 ▼                 │     │
-│ Correlation     OpenSearch        ClickHouse           │     │
-│ Engine          Search/Forensic   Analytics            │     │
-│    │                                                         │
-│    ▼                                                         │
-│ PostgreSQL Incident + MITRE ATT&CK Tagging                   │
-│    │                                                         │
-│    ├──▶ React Dashboard                                     │
-│    ├──▶ AI Security Report                                  │
-│    └──▶ Slack / Discord Alert                               │
-└──────────────────────────────────────────────────────────────┘
+┌────────────── Target Security Node ──────────────┐
+│ Browser                                          │
+│ FastAPI WAF                                      │
+│ Juice Shop                                       │
+│ Falco                                            │
+│ Kubernetes Audit                                 │
+└──────────────────────┬───────────────────────────┘
+                       │ OTLP
+                       ▼
+┌────────────────── SENTINEL-OPS Platform ──────────────────┐
+│ OpenTelemetry → Kafka → Normalizer → Correlation Engine   │
+│                 ├─ PostgreSQL                             │
+│                 ├─ OpenSearch                             │
+│                 └─ ClickHouse                             │
+│                                                           │
+│ Dashboard · AI Report · Slack / Discord                   │
+└───────────────────────────────────────────────────────────┘
 ```
+---
 
-### 공격 탐지 예시
-
-```text
-1. WAF       : SQL Injection 페이로드 탐지
-2. WAS       : 동일 IP의 반복적인 인증 우회 요청 기록
-3. Falco     : 컨테이너 내부 비정상 셸 실행 탐지
-4. K8s Audit : ServiceAccount 권한 변경 시도 기록
-5. SIEM      : 시간·IP·리소스 관계를 분석해 하나의 Critical 인시던트로 병합
-6. Response  : 대시보드 표시 + AI 분석 + Slack 긴급 알림
-```
+## 🚨 Attack Detection Scenario
+- 🌐 WAF : SQL Injection 페이로드 탐지
+- 📄 WAS : 동일 IP의 반복적인 인증 우회 요청 기록
+- 📦 Falco: 컨테이너 내부 비정상 셸 실행 탐지
+-  ☸️Kubernetes Audit: ServiceAccount 권한 변경 시도 기록
+-  🔗 SIEM: 시간·IP·리소스 관계를 분석해 하나의 Critical 인시던트로 병합
+-  📢 Response: 대시보드 표시 + AI 분석 + Slack 긴급 알림
 
 ---
 
-## 🖥️ 주요 화면
+## 🖥️ Screenshots
 
 ### Overview
 
@@ -304,7 +282,7 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 ## 🗃️ Data Architecture
 
 <div align="center">
-<img src="./assets/image.png" width="950" alt="SENTINEL-OPS ERD" />
+<img src="./assets/erd.png" width="950" alt="SENTINEL-OPS ERD" />
 </div>
 
 | 저장소 | 역할 |
