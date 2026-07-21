@@ -38,14 +38,14 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 ## 📑 Table of Contents
 - [🎯 Project Overview](#-project-overview)
 - [🎬Demo](#-demo)
-- [⚖️ Challenges & Solutions](#-challenges--solutions)
+- [⚖️ Challenges & Solutions](#challenges-solutions)
 - [✨ Key Features](#-key-features)
 - [🔄 End-to-End Security Flow](#-end-to-end-security-flow)
 - [🚨 Attack Detection Scenario](#-attack-detection-scenario)
 - [🖥️ Screenshots](#-screenshots)
-- [🏗️ System Architecture](#-system-architecture)
-- [🗃️ Data Architecture](#-data-architecture)
-- [🛠️ Tech Stack](#-tech-stack)
+- [🏗️ System Architecture](#system-architecture)
+- [🗃️ Data Architecture](#data-architecture)
+- [🛠️ Tech Stack](#tech-stack)
 - [📦 Repositories](#-repositories)
 - [👥 Team B](#-team-b)
 - [📚 Documentation](#-documentation)
@@ -82,6 +82,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 <!-- hero.gif 업로드 후 사용하세요. -->
 <img src="./assets/.gif" width="950" alt="SENTINEL-OPS Architecture Demo" />
+
 
 ---
 </div>
