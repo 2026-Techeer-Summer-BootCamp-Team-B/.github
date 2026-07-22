@@ -81,7 +81,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 <div align="center">
 
 <!-- hero.gif 업로드 후 사용하세요. -->
-<img src="./assets/.gif" width="950" alt="SENTINEL-OPS Architecture Demo" />
+<img src="./assets/infra_line.gif" width="950" alt="SENTINEL-OPS Architecture Demo" />
 
 
 ---
@@ -225,7 +225,8 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 전체 로그 수, 위험도, 활성 탐지 소스, 공격 발원지, 최근 이벤트와 상관 흐름을 한 화면에서 확인합니다.
 
 <div align="center">
-<img src="./assets/overview.png" width="950" alt="Overview Dashboard" />
+<img src="./assets/overview-black.png" width="950" alt="Overview Dashboard" />
+<img src="./assets/overview-white.png" width="950" alt="Overview Dashboard" />
 </div>
 
 <br/>
@@ -235,9 +236,23 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 연관 이벤트를 시간순 공격 스토리라인으로 확인하고, MITRE ATT&CK 태그·상태·정오답 판정을 관리합니다.
 
 <div align="center">
-<img src="./assets/incident.png" width="950" alt="Incident Dashboard" />
+<img src="./assets/incident-black.png" width="950" alt="Incident Dashboard" />
+  <img src="./assets/incident-white.png" width="950" alt="Incident Dashboard" />
 </div>
 
+<br/>
+
+### ACTT&CK
+
+MITRE ATT&CK 전술/기법 매트릭스를 확인하고, 셀을 클릭하면 해당 기법에서 탐지된 실제 인시던트 목록을 조회할 수 있습니다.
+
+<div align="center">
+<img src="./assets/ATT&CK_black" width="950" alt="Admin Dashboard" />
+  <img src="./assets/ATT&CK_white" width="950" alt="Admin Dashboard" />
+</div>
+
+<details>
+<summary><b>WAF / WAS / Falco / K8s Audit 상세 화면</b></summary>
 <br/>
 
 ### Infrastructure
@@ -245,12 +260,13 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전체 보안 파이프라인의 상태를 확인합니다.
 
 <div align="center">
-<img src="./assets/infrastructure.png" width="950" alt="Infrastructure Dashboard" />
+<img src="./assets/infrastructure-black.png" width="950" alt="Infrastructure Dashboard" />
+  <img src="./assets/infrastructure-white.png" width="950" alt="Infrastructure Dashboard" />
 </div>
 
 <br/>
 
-### Admin
+### Admin/audit
 
 사용자·보호 대상·예외 IP·시나리오 룰·알림 등급·보존 정책을 통합 관리합니다.
 
@@ -281,6 +297,7 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 </details>
 
 ---
+
 
 ## 🏗️ System Architecture
 
