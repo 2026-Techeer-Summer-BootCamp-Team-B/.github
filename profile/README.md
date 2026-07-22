@@ -25,6 +25,14 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 <br/>
 
+<p>
+  <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
+  <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Falco-00AEC7?style=for-the-badge&logo=falco&logoColor=white" alt="Falco" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+</p>
 
 
 
@@ -77,8 +85,6 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 <img src="./assets/DualMonitorTour.gif" width="950" alt="SENTINEL-OPS Page Demo" />
 
-</div>
-<div align="center">
 
 <!-- hero.gif 업로드 후 사용하세요. -->
 <img src="./assets/infra_line.gif" width="950" alt="SENTINEL-OPS Architecture Demo" />
@@ -242,13 +248,13 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 <br/>
 
-### ACTT&CK
+### ATT&CK
 
 MITRE ATT&CK 전술/기법 매트릭스를 확인하고, 셀을 클릭하면 해당 기법에서 탐지된 실제 인시던트 목록을 조회할 수 있습니다.
 
 <div align="center">
-<img src="./assets/ATT&CK_black" width="950" alt="Admin Dashboard" />
-  <img src="./assets/ATT&CK_white" width="950" alt="Admin Dashboard" />
+<img src="./assets/attack-black.png" width="950" alt="ATT&CK Dashboard" />
+  <img src="./assets/attack-white.png" width="950" alt="ATT&CK Dashboard" />
 </div>
 
 <br/>
@@ -258,13 +264,13 @@ MITRE ATT&CK 전술/기법 매트릭스를 확인하고, 셀을 클릭하면 해
 Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전체 보안 파이프라인의 상태를 확인합니다.
 
 <div align="center">
-<img src="./assets/infrastructure-black.png" width="950" alt="Infrastructure Dashboard" />
-  <img src="./assets/infrastructure-white.png" width="950" alt="Infrastructure Dashboard" />
+<img src="./assets/Infrastructure-black.png" width="950" alt="Infrastructure Dashboard" />
+  <img src="./assets/Infrastructure-white.png" width="950" alt="Infrastructure Dashboard" />
 </div>
 
 <br/>
 
-### Admin/audit
+### Admin / Audit
 
 사용자·보호 대상·예외 IP·시나리오 룰·알림 등급·보존 정책을 통합 관리합니다.
 
