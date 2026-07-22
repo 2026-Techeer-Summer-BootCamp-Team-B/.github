@@ -454,13 +454,31 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 | **Falco** | 룰 이름, 프로세스, 컨테이너·Pod·Namespace 컨텍스트 |
 | **K8s Audit** | Verb, 리소스, RBAC 변경, 사용자·ServiceAccount |
 
+### WAF
 <p align="center">
-<img src="./assets/waf.png" width="48%" alt="WAF Page" />
-<img src="./assets/was.png" width="48%" alt="WAS Page" />
+<img src="./assets/waf-white.png" width="48%" alt="WAF Page" />
+<img src="./assets/waf-black.png" width="48%" alt="WAF Page" />
 </p>
+
+### WAS
+
 <p align="center">
-<img src="./assets/falco.png" width="48%" alt="Falco Page" />
-<img src="./assets/k8s-audit.png" width="48%" alt="Kubernetes Audit Page" />
+<img src="./assets/was-white.png" width="48%" alt="was Page" />
+<img src="./assets/was-black.png" width="48%" alt="was Page" />
+</p>
+
+### FALCO
+
+<p align="center">
+<img src="./assets/falco-white.png" width="48%" alt="falco Page" />
+<img src="./assets/falco-black.png" width="48%" alt="falco Page" />
+</p>
+
+### K8S Audit
+
+<p align="center">
+<img src="./assets/k8d-white.png" width="48%" alt="k8d Page" />
+<img src="./assets/k8d-black.png" width="48%" alt="k8d Page" />
 </p>
 
 </details>
@@ -640,12 +658,12 @@ OWASP Juice Shop을 보호 대상으로 구성하고, 자체 FastAPI WAF·WAS·F
 ---
 
 ## 📚 Documentation
-- [✏️ Team Notion](https://app.notion.com/p/Techeer-12th-B-team-38ecc8a8704080ab8bd8d238da3e999c?source=copy_link)
+- [Team Notion](https://app.notion.com/p/Techeer-12th-B-team-38ecc8a8704080ab8bd8d238da3e999c?source=copy_link)
 - [Central SIEM README](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR#readme)
 - [Target Security Node README](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b#readme)
 - [Backend Engineering Notes](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md) 
 - Architecture Decision Records
-- API Documentation
+- [API Documentation](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md#%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%97%B0%EB%8F%99-api)
 - Deployment Guide
 - Detection Scenario Rules
 - Demo Scenario Guide
