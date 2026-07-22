@@ -63,10 +63,11 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 - [🖥️ Screenshots](#screenshots)
 - [🛠️ Tech Stack](#tech-stack)
 - [📦 Repositories](#-repositories)
+- [📗 API](#-api-자세히)
 - [👥 Team B](#-team-members)
 - [📚 Documentation](#-documentation)
   
----
+---## 📗 API
 
 ## 🎯 Project Overview
 <div align="center">
@@ -578,7 +579,14 @@ OWASP Juice Shop을 보호 대상으로 구성하고, 자체 FastAPI WAF·WAS·F
 > 각 저장소의 설치 방법, 환경 변수, 디렉터리 구조와 세부 구현은 해당 저장소의 README에서 관리합니다. 이 Organization README는 전체 프로젝트의 목적과 두 저장소의 관계를 설명하는 통합 소개 페이지입니다.
 
 ---
+## 📗 API [(자세히)](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md#%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%97%B0%EB%8F%99-api)
+<img src="./assets/api1.png" width="950" alt="api1" />
+<img src="./assets/api2.png" width="950" alt="api2" />
+<img src="./assets/api3.png" width="950" alt="api3" />
+<img src="./assets/api4.png" width="950" alt="api4" />
 
+
+---
 ## 👥 Team Members
 
 <table>
