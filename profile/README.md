@@ -48,7 +48,6 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 - [🎬Demo](#-demo)
 - [⚖️ Challenges & Solutions](#challenges-solutions)
 - [✨ Key Features](#-key-features)
-- [🔄 End-to-End Security Flow](#-end-to-end-security-flow)
 - [🚨 Attack Detection Scenario](#-attack-detection-scenario)
 - [🖥️ Screenshots](#-screenshots)
 - [🏗️ System Architecture](#system-architecture)
@@ -189,29 +188,6 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 
 
----
-
-## 🔄 End-to-End Security Flow
-
-```text
-┌────────────── Target Security Node ──────────────┐
-│ Browser                                          │
-│ FastAPI WAF                                      │
-│ Juice Shop                                       │
-│ Falco                                            │
-│ Kubernetes Audit                                 │
-└──────────────────────┬───────────────────────────┘
-                       │ OTLP
-                       ▼
-┌────────────────── SENTINEL-OPS Platform ──────────────────┐
-│ OpenTelemetry → Kafka → Normalizer → Correlation Engine   │
-│                 ├─ PostgreSQL                             │
-│                 ├─ OpenSearch                             │
-│                 └─ ClickHouse                             │
-│                                                           │
-│ Dashboard · AI Report · Slack / Discord                   │
-└───────────────────────────────────────────────────────────┘
-```
 ---
 
 ## 🚨 Attack Detection Scenario
