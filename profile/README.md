@@ -134,9 +134,9 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 ### 🧩 시나리오 상관분석
 
 - Threshold·Sequence 룰 지원
-- 32종 시나리오 룰 평가
+- 109종 상관분석 시나리오 (8개 카테고리)
+- MITRE ATT&CK for Containers 근거 기반
 - 이벤트 자동 생성·병합
-- MITRE ATT&CK 자동 태깅
 - 시간·IP·계정·리소스 관계 분석
 
 </td>
@@ -567,7 +567,7 @@ OWASP Juice Shop을 보호 대상으로 구성하고, 자체 FastAPI WAF·WAS·F
 - [✏️ Team Notion](https://app.notion.com/p/Techeer-12th-B-team-38ecc8a8704080ab8bd8d238da3e999c?source=copy_link)
 - [Central SIEM README](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR#readme)
 - [Target Security Node README](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b#readme)
-- [Backend Engineering Notes](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDSCOLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md) 
+- [Backend Engineering Notes](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md) 
 - Architecture Decision Records
 - API Documentation
 - Deployment Guide
