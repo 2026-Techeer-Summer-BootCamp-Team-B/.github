@@ -37,12 +37,16 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 </p>
 
+<p>
+  <a href="https://dashboard-phi-ten.vercel.app/"><b>🚀 Live Demo</b></a> ·
+  <a href="https://app.notion.com/p/Techeer-12th-B-team-38ecc8a8704080ab8bd8d238da3e999c?source=copy_link"><b>✏️ Team Notion</b></a> ·
+  <a href="https://medium.com/@yongwook0001/siliconvalley-bootcamp-team-b-sentinel-ops-f6b68e3c93b7"><b>📝 Medium Blog</b></a>
+</p>
 
-[**🚀 Live Demo**](https://dashboard-phi-ten.vercel.app/) ·
-[**✏️ Team Notion**](https://app.notion.com/p/Techeer-12th-B-team-38ecc8a8704080ab8bd8d238da3e999c?source=copy_link)·
-[**📝 Medium blog**](https://medium.com/@yongwook0001/siliconvalley-bootcamp-team-b-sentinel-ops-f6b68e3c93b7)·
-[**📦 Central SIEM 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR) ·
-[**🖥️ Target 서버 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b)·
+<p>
+  <a href="https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR"><b>📦 Central SIEM 저장소</b></a> ·
+  <a href="https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b"><b>🖥️ Target 서버 저장소</b></a>
+</p>
 
 </div>
 
@@ -50,7 +54,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 ## 📑 Table of Contents
 - [🎯 Project Overview](#-project-overview)
-- [🎬Demo](#-demo)
+- [🎬 Demo](#-demo)
 - [⚖️ Challenges & Solutions](#challenges-solutions)
 - [✨ Key Features](#-key-features)
 - [🚨 Attack Detection Scenario](#-attack-detection-scenario)
@@ -198,12 +202,12 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 | 단계 | 탐지 계층 | 탐지 이벤트 |
 | --- | --- | --- |
-| 1 |🌐 WAF | SQL Injection 페이로드 탐지 |
-| 2 |📄 WAS | 동일 IP의 반복적인 인증 우회 요청 |
-| 3 |📦 Falco | 컨테이너 내부 비정상 셸 실행 |
-| 4 |☸️ K8s Audit | ServiceAccount 권한 변경 시도 |
-| 5 |🔗 SIEM | 시간·IP·리소스 기반 이벤트 상관분석 |
-| 6 |📢 Response | Critical 인시던트 생성 및 Slack 알림 |
+| 1 | 🌐 WAF | SQL Injection 페이로드 탐지 |
+| 2 | 📄 WAS | 동일 IP의 반복적인 인증 우회 요청 |
+| 3 | 📦 Falco | 컨테이너 내부 비정상 셸 실행 |
+| 4 | ☸️ K8s Audit | ServiceAccount 권한 변경 시도 |
+| 5 | 🔗 SIEM | 시간·IP·리소스 기반 이벤트 상관분석 |
+| 6 | 📢 Response | Critical 인시던트 생성 및 Slack 알림 |
 
 > 개별적으로 분리된 4개 보안 이벤트를 하나의 Critical 인시던트로 재구성합니다.
 
@@ -401,7 +405,7 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 
 
 
-## 🌐 WAF /📄 WAS /📦 Falco /☸️ K8s Audit
+## 🌐 WAF / 📄 WAS / 📦 Falco / ☸️ K8s Audit
 
 각 보안 계층에서 수집된 이벤트의 탐지 정보와 운영 지표를 상세 화면에서 확인할 수 있습니다.
 
@@ -483,7 +487,6 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 <p>
 <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" />
 <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus" />
-<img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka">
 <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack">
 <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
 </p>
