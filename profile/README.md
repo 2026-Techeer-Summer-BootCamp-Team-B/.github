@@ -63,7 +63,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 - [🖥️ Screenshots](#screenshots)
 - [🛠️ Tech Stack](#tech-stack)
 - [📦 Repositories](#-repositories)
-- [👥 Team B](#-team-b)
+- [👥 Team B](#-team-members)
 - [📚 Documentation](#-documentation)
   
 ---
@@ -575,19 +575,54 @@ OWASP Juice Shop을 보호 대상으로 구성하고, 자체 FastAPI WAF·WAS·F
 
 ---
 
-## 👥 Team B
+## 👥 Team Members
 
-<!-- 실제 GitHub ID와 담당 영역을 최종 확인해 수정하세요. -->
+<table>
+<tr>
+<th align="center">Name</th>
+<th align="center"><a href="https://github.com/yongwook0001-hub">이용욱</a></th>
+<th align="center"><a href="https://github.com/SimDaum">심다움</a></th>
+<th align="center"><a href="https://github.com/hajh1113">하지환</a></th>
+<th align="center"><a href="https://github.com/yjaeyoung">윤재영</a></th>
+<th align="center"><a href="https://github.com/sdy100million">서동영</a></th>
+</tr>
 
-| 이름 | 역할 | 주요 담당 영역 |
-| --- | --- | --- | 
-| 이용욱 | 팀장 | |
-| 심다움 | 팀원 | |
-| 하지환 | 팀원 | |
-| 윤재영 | 팀원 | |
-| 서동영 | 팀원 | |
+<tr>
+<th align="center">Profile</th>
+<td align="center" valign="middle">
+<a href="https://github.com/yongwook0001-hub">
+<img src="https://github.com/yongwook0001-hub.png" width="100" height="100" alt="이용욱" />
+</a>
+</td>
+<td align="center" valign="middle">
+<a href="https://github.com/SimDaum">
+<img src="https://github.com/SimDaum.png" width="100" height="100" alt="심다움" />
+</a>
+</td>
+<td align="center" valign="middle">
+<a href="https://github.com/hajh1113">
+<img src="https://github.com/hajh1113.png" width="100" height="100" alt="하지환" />
+</a>
+</td>
+<td align="center" valign="middle">
+<a href="https://github.com/yjaeyoung">
+<img src="https://github.com/yjaeyoung.png" width="100" height="100" alt="윤재영" />
+</a>
+</td>
+<td align="center" valign="middle">
+<img src="https://github.com/sdy100million.png" width="100" height="100" alt="서동영" />
+</td>
+</tr>
 
-
+<tr>
+<th align="center">Role</th>
+<td align="center">Team Leader<br/>Fullstack, DevOps</td>
+<td align="center">Backend, DevOps</td>
+<td align="center">Backend</td>
+<td align="center">Backend</td>
+<td align="center">Frontend</td>
+</tr>
+</table>
 
 ---
 
