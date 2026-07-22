@@ -14,6 +14,9 @@ waf.png, was.png, falco.png, k8s-audit.png
 <img src="./assets/logo.png" width="130" alt="SENTINEL-OPS Logo" />
 -->
 
+
+
+
 # SENTINEL-OPS
 
 
@@ -49,7 +52,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 - [⚖️ Challenges & Solutions](#challenges-solutions)
 - [✨ Key Features](#-key-features)
 - [🚨 Attack Detection Scenario](#-attack-detection-scenario)
-- [🖥️ Screenshots](#-screenshots)
+- [🖥️ Screenshots](#screenshots)
 - [🏗️ System Architecture](#system-architecture)
 - [🗃️ Data Architecture](#data-architecture)
 - [🛠️ Tech Stack](#tech-stack)
@@ -93,7 +96,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 </div>
 
 
-
+<a id="challenges-solutions"></a>
 ## ⚖️ Challenges & Solutions
 
 | 기존 문제 | SENTINEL-OPS의 해결 방식 |
@@ -199,7 +202,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 -  📢 Response: 대시보드 표시 + AI 분석 + Slack 긴급 알림
 
 ---
-
+<a id="screenshots"></a>
 ## 🖥️ Screenshots
 
 ### Overview
@@ -279,7 +282,7 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 
 ---
 
-
+<a id="system-architecture"></a>
 ## 🏗️ System Architecture
 
 <div align="center">
@@ -324,7 +327,7 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 
 
 ---
-
+<a id="data-architecture"></a>
 ## 🗃️ Data Architecture
 
 <div align="center">
@@ -359,7 +362,7 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 </details>
 
 ---
-
+<a id="tech-stack"></a>
 ## 🛠️ Tech Stack
 
 ### Frontend
