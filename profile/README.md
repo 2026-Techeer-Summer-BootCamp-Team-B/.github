@@ -39,10 +39,10 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 
 [**🚀 Live Demo**](https://dashboard-phi-ten.vercel.app/) ·
-[**✏️ Team Notion**](https://app.notion.com/p/Techeer-12th-B-team-38ecc8a8704080ab8bd8d238da3e999c?source=copy_link)
-[**📝 Medium blog**](https://medium.com/@yongwook0001/siliconvalley-bootcamp-team-b-sentinel-ops-f6b68e3c93b7)
+[**✏️ Team Notion**](https://app.notion.com/p/Techeer-12th-B-team-38ecc8a8704080ab8bd8d238da3e999c?source=copy_link)·
+[**📝 Medium blog**](https://medium.com/@yongwook0001/siliconvalley-bootcamp-team-b-sentinel-ops-f6b68e3c93b7)·
 [**📦 Central SIEM 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR) ·
-[**🖥️ Target 서버 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b)
+[**🖥️ Target 서버 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b)·
 
 </div>
 
@@ -90,7 +90,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 <img src="./assets/DualMonitorTour.gif" width="950" alt="SENTINEL-OPS Page Demo" />
 
 
-<img src="./assets/infra_line.gif" width="950" alt="SENTINEL-OPS Architecture Demo" />
+
 
 </div>
 
@@ -203,7 +203,8 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 | 3 |📦 Falco | 컨테이너 내부 비정상 셸 실행 |
 | 4 |☸️ K8s Audit | ServiceAccount 권한 변경 시도 |
 | 5 |🔗 SIEM | 시간·IP·리소스 기반 이벤트 상관분석 |
-| 6 |📢 Response | Critical 인시던트 생성 및 Slack 알림 || 단계 | 탐지 계층 | 탐지 이벤트 |
+| 6 |📢 Response | Critical 인시던트 생성 및 Slack 알림 |
+
 > 개별적으로 분리된 4개 보안 이벤트를 하나의 Critical 인시던트로 재구성합니다.
 
 ---
@@ -215,7 +216,29 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 <img src="./assets/architecture.png" width="900" alt="SENTINEL-OPS System Architecture" />
 </div>
 
-### Processing Pipeline
+<details>
+<summary><b>▶️ Architecture Flow Animation</b></summary>
+
+<div align="center">
+  <img src="./assets/infra_line.gif" width="950"
+       alt="SENTINEL-OPS Architecture Flow" />
+</div>
+
+</details>
+
+
+### Architecture Flow
+1. **Detect & Collect** — Target 서버에서 WAF·WAS·Falco·K8s Audit 이벤트를 생성하고 OTel Collector로 수집합니다.
+2. **Transfer** — Target Collector가 이벤트에 `log.source`를 부여하고 Central SIEM으로 OTLP 전송합니다.
+3. **Normalize** — 중복 제거, 소스별 파싱, ECS 정규화, GeoIP·Kubernetes 메타데이터 보강을 수행합니다.
+4. **Correlate** — Threshold·Sequence 시나리오를 평가해 연관 이벤트를 하나의 인시던트로 병합합니다.
+5. **Store & Analyze** — PostgreSQL은 운영 데이터, OpenSearch는 검색·포렌식, ClickHouse는 대량 분석, Redis는 상태·세션을 담당합니다.
+6. **Visualize & Notify** — FastAPI와 React 대시보드가 결과를 제공하고 AI 리포트 및 Slack·Discord 알림을 전송합니다.
+
+<details>
+<summary><b>🔍 Detailed Processing Pipeline</b></summary>
+<br/>
+
 ```text
 [Target 플레인 — k3d 클러스터]
   Juice Shop (보호 대상)
@@ -240,19 +263,6 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
   PostgreSQL (인시던트)
             ▼
   Platform API (FastAPI, REST 폴링) ──→ React 대시보드
-```
-### Architecture Flow
-<details>
-<summary><b>🔍 Detailed Processing Pipeline</b></summary>
-<br/>
-
-```text
-1. **Detect & Collect** — Target 서버에서 WAF·WAS·Falco·K8s Audit 이벤트를 생성하고 OTel Collector로 수집합니다.
-2. **Transfer** — Target Collector가 이벤트에 `log.source`를 부여하고 Central SIEM으로 OTLP 전송합니다.
-3. **Normalize** — 중복 제거, 소스별 파싱, ECS 정규화, GeoIP·Kubernetes 메타데이터 보강을 수행합니다.
-4. **Correlate** — Threshold·Sequence 시나리오를 평가해 연관 이벤트를 하나의 인시던트로 병합합니다.
-5. **Store & Analyze** — PostgreSQL은 운영 데이터, OpenSearch는 검색·포렌식, ClickHouse는 대량 분석, Redis는 상태·세션을 담당합니다.
-6. **Visualize & Notify** — FastAPI와 React 대시보드가 결과를 제공하고 AI 리포트 및 Slack·Discord 알림을 전송합니다.
 ```
 </details>
 
@@ -392,7 +402,9 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 
 
 ## 🌐 WAF /📄 WAS /📦 Falco /☸️ K8s Audit
-각 카테고리별로 
+
+각 보안 계층에서 수집된 이벤트의 탐지 정보와 운영 지표를 상세 화면에서 확인할 수 있습니다.
+
 <details>
 <summary><b>상세 화면</b></summary>
 <br/>
@@ -471,7 +483,6 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 <p>
 <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" />
 <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus" />
-<img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
 <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka">
 <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack">
 <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
