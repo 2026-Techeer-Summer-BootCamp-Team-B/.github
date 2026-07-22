@@ -310,12 +310,42 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 <img src="./assets/architecture.png" width="900" alt="SENTINEL-OPS System Architecture" />
 </div>
 
+### Processing Pipeline
+```text
+[Target 플레인 — k3d 클러스터]
+  Juice Shop (보호 대상)
+  ├─ nginx 사이드카 ──── WAS raw access log
+  ├─ FastAPI WAF 센서 ── 시그니처 탐지 alert (OTLP push)
+  ├─ Falco (eBPF) ────── 커널 런타임 이벤트
+  └─ K8s Audit Policy ── 컨트롤플레인 행위 기록
+            │
+            ▼  OTel Collector (filelog tail + OTLP 수신 → 태깅 → 중앙 전송)
+            │
+   ═════ OTLP gRPC ═════
+            │
+[Central SIEM 플레인 — GCP VM / docker-compose]
+  Traefik (단일 진입점, forwardAuth 인증 게이트)
+            ▼
+  Gateway OTel Collector ──→ Kafka (소스별 토픽: events.was/waf/falco/audit)
+            ▼
+  Normalizer (dedupe → parse → 정규화 → 심각도 → enrich) ──→ events.normalized
+            ▼                                    ▼
+  Correlation Engine (시나리오 YAML)        Data Prepper → OpenSearch
+            ▼                               Kafka Engine → ClickHouse
+  PostgreSQL (인시던트)
+            ▼
+  Platform API (FastAPI, REST 폴링) ──→ React 대시보드
+```
+### Architecture Flow
+
 1. **Detect & Collect** — Target 서버에서 WAF·WAS·Falco·K8s Audit 이벤트를 생성하고 OTel Collector로 수집합니다.
 2. **Transfer** — Target Collector가 이벤트에 `log.source`를 부여하고 Central SIEM으로 OTLP 전송합니다.
 3. **Normalize** — 중복 제거, 소스별 파싱, ECS 정규화, GeoIP·Kubernetes 메타데이터 보강을 수행합니다.
 4. **Correlate** — Threshold·Sequence 시나리오를 평가해 연관 이벤트를 하나의 인시던트로 병합합니다.
 5. **Store & Analyze** — PostgreSQL은 운영 데이터, OpenSearch는 검색·포렌식, ClickHouse는 대량 분석, Redis는 상태·세션을 담당합니다.
 6. **Visualize & Notify** — FastAPI와 React 대시보드가 결과를 제공하고 AI 리포트 및 Slack·Discord 알림을 전송합니다.
+
+
 
 ---
 
