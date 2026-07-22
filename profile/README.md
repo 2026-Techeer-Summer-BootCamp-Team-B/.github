@@ -387,21 +387,49 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 
 사용자·보호 대상·예외 IP·시나리오 룰·알림 등급·보존 정책을 통합 관리합니다.
 
+ #### 탐지·정책
 
 <div align="center">
-  <img src="./assets/admin.png" width="950" alt="Admin Dashboard" />
+<img src="./assets/admin1-white.png" width="950" alt="User and Target Management Dashboard" />
+</div>
+
+#### 대상·알림
+
+ <div align="center">
+   <img src="./assets/admin2-white.png" width="950" alt="Security Policy Management Dashboard" />
+ </div>
+
+ ####  감사 로그
+
+<div align="center">
+  <img src="./assets/admin3-white.png" width="950" alt="Audit and Notification Settings Dashboard" />
 </div>
 
 <details>
 <summary><b>Dark Mode</b></summary>
+<br/>
+
+ #### 탐지·정책
 
 <div align="center">
-  <img src="./assets/admin.png" width="950" alt="Admin Dashboard" />
+  <img src="./assets/admin1-black.png" width="950" alt="User and Target Management Dark Dashboard" />
+</div>
+
+ #### 대상·알림
+
+<div align="center">
+  <img src="./assets/admin2-black.png" width="950" alt="Security Policy Management Dark Dashboard" />
+</div>
+
+### 감사 로그
+
+<div align="center">
+  <img src="./assets/admin3-black.png" width="950" alt="Audit and Notification Settings Dark Dashboard" />
 </div>
 
 </details>
-<br/>
 
+<br/>
 
 
 
