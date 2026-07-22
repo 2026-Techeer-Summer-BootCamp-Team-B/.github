@@ -38,7 +38,9 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 </p>
 
 
-
+[**🚀 Live Demo**](https://dashboard-phi-ten.vercel.app/) ·
+[**✏️ Team Notion**](https://app.notion.com/p/Techeer-12th-B-team-38ecc8a8704080ab8bd8d238da3e999c?source=copy_link)
+[**📝 Medium blog**](https://medium.com/@yongwook0001/siliconvalley-bootcamp-team-b-sentinel-ops-f6b68e3c93b7)
 [**📦 Central SIEM 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR) ·
 [**🖥️ Target 서버 저장소**](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b)
 
@@ -88,12 +90,11 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 <img src="./assets/DualMonitorTour.gif" width="950" alt="SENTINEL-OPS Page Demo" />
 
 
-<!-- hero.gif 업로드 후 사용하세요. -->
 <img src="./assets/infra_line.gif" width="950" alt="SENTINEL-OPS Architecture Demo" />
 
+</div>
 
 ---
-</div>
 
 
 <a id="challenges-solutions"></a>
@@ -194,12 +195,16 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 ---
 
 ## 🚨 Attack Detection Scenario
-- 🌐 WAF : SQL Injection 페이로드 탐지
-- 📄 WAS : 동일 IP의 반복적인 인증 우회 요청 기록
-- 📦 Falco: 컨테이너 내부 비정상 셸 실행 탐지
--  ☸️Kubernetes Audit: ServiceAccount 권한 변경 시도 기록
--  🔗 SIEM: 시간·IP·리소스 관계를 분석해 하나의 Critical 인시던트로 병합
--  📢 Response: 대시보드 표시 + AI 분석 + Slack 긴급 알림
+
+| 단계 | 탐지 계층 | 탐지 이벤트 |
+| --- | --- | --- |
+| 1 |🌐 WAF | SQL Injection 페이로드 탐지 |
+| 2 |📄 WAS | 동일 IP의 반복적인 인증 우회 요청 |
+| 3 |📦 Falco | 컨테이너 내부 비정상 셸 실행 |
+| 4 |☸️ K8s Audit | ServiceAccount 권한 변경 시도 |
+| 5 |🔗 SIEM | 시간·IP·리소스 기반 이벤트 상관분석 |
+| 6 |📢 Response | Critical 인시던트 생성 및 Slack 알림 || 단계 | 탐지 계층 | 탐지 이벤트 |
+> 개별적으로 분리된 4개 보안 이벤트를 하나의 Critical 인시던트로 재구성합니다.
 
 ---
 <a id="screenshots"></a>
@@ -210,21 +215,34 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 전체 로그 수, 위험도, 활성 탐지 소스, 공격 발원지, 최근 이벤트와 상관 흐름을 한 화면에서 확인합니다.
 
 <div align="center">
-<img src="./assets/overview-black.png" width="950" alt="Overview Dashboard" />
-<img src="./assets/overview-white.png" width="950" alt="Overview Dashboard" />
+  <img src="./assets/overview-white.png" width="950" alt="Overview Dashboard" />
 </div>
 
+<details>
+<summary><b>Dark Mode</b></summary>
+
+<div align="center">
+  <img src="./assets/overview-black.png" width="950" alt="Overview Dashboard" />
+</div>
+
+</details>
 <br/>
 
 ### Incident
 
 연관 이벤트를 시간순 공격 스토리라인으로 확인하고, MITRE ATT&CK 태그·상태·정오답 판정을 관리합니다.
-
 <div align="center">
-<img src="./assets/incident-black.png" width="950" alt="Incident Dashboard" />
   <img src="./assets/incident-white.png" width="950" alt="Incident Dashboard" />
 </div>
 
+<details>
+<summary><b>Dark Mode</b></summary>
+
+<div align="center">
+  <img src="./assets/incident-black.png" width="950" alt="Incident Dashboard" />
+</div>
+
+</details>
 <br/>
 
 ### ATT&CK
@@ -232,33 +250,64 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 MITRE ATT&CK 전술/기법 매트릭스를 확인하고, 셀을 클릭하면 해당 기법에서 탐지된 실제 인시던트 목록을 조회할 수 있습니다.
 
 <div align="center">
-<img src="./assets/attack-black.png" width="950" alt="ATT&CK Dashboard" />
   <img src="./assets/attack-white.png" width="950" alt="ATT&CK Dashboard" />
 </div>
 
-<br/>
-
-### Infrastructure
-
-Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전체 보안 파이프라인의 상태를 확인합니다.
+<details>
+<summary><b>Dark Mode</b></summary>
 
 <div align="center">
-<img src="./assets/Infrastructure-black.png" width="950" alt="Infrastructure Dashboard" />
+   <img src="./assets/attack-black.png" width="950" alt="ATT&CK Dashboard" />
+</div>
+
+</details>
+<br/>
+
+
+### Infrastructure
+Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전체 보안 파이프라인의 상태를 확인합니다.
+
+
+<div align="center">
   <img src="./assets/Infrastructure-white.png" width="950" alt="Infrastructure Dashboard" />
 </div>
 
+<details>
+<summary><b>Dark Mode</b></summary>
+
+<div align="center">
+  <img src="./assets/Infrastructure-black.png" width="950" alt="Infrastructure Dashboard" />
+</div>
+
+</details>
 <br/>
 
 ### Admin / Audit
 
 사용자·보호 대상·예외 IP·시나리오 룰·알림 등급·보존 정책을 통합 관리합니다.
 
+
 <div align="center">
-<img src="./assets/admin.png" width="950" alt="Admin Dashboard" />
+  <img src="./assets/admin.png" width="950" alt="Admin Dashboard" />
 </div>
 
 <details>
-<summary><b>🌐 WAF /📄 WAS /📦 Falco /☸️ K8s Audit 상세 화면</b></summary>
+<summary><b>Dark Mode</b></summary>
+
+<div align="center">
+  <img src="./assets/admin.png" width="950" alt="Admin Dashboard" />
+</div>
+
+</details>
+<br/>
+
+
+
+
+## 🌐 WAF /📄 WAS /📦 Falco /☸️ K8s Audit
+각 카테고리별로 
+<details>
+<summary><b>상세 화면</b></summary>
 <br/>
  
 
@@ -316,15 +365,19 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
   Platform API (FastAPI, REST 폴링) ──→ React 대시보드
 ```
 ### Architecture Flow
+<details>
+<summary><b>🔍 Detailed Processing Pipeline</b></summary>
+<br/>
 
+```text
 1. **Detect & Collect** — Target 서버에서 WAF·WAS·Falco·K8s Audit 이벤트를 생성하고 OTel Collector로 수집합니다.
 2. **Transfer** — Target Collector가 이벤트에 `log.source`를 부여하고 Central SIEM으로 OTLP 전송합니다.
 3. **Normalize** — 중복 제거, 소스별 파싱, ECS 정규화, GeoIP·Kubernetes 메타데이터 보강을 수행합니다.
 4. **Correlate** — Threshold·Sequence 시나리오를 평가해 연관 이벤트를 하나의 인시던트로 병합합니다.
 5. **Store & Analyze** — PostgreSQL은 운영 데이터, OpenSearch는 검색·포렌식, ClickHouse는 대량 분석, Redis는 상태·세션을 담당합니다.
 6. **Visualize & Notify** — FastAPI와 React 대시보드가 결과를 제공하고 AI 리포트 및 Slack·Discord 알림을 전송합니다.
-
-
+```
+</details>
 
 ---
 <a id="data-architecture"></a>
@@ -492,11 +545,16 @@ OWASP Juice Shop을 보호 대상으로 구성하고, 자체 FastAPI WAF·WAS·F
 ---
 
 ## 📚 Documentation
-
+- [✏️ Team Notion](https://app.notion.com/p/Techeer-12th-B-team-38ecc8a8704080ab8bd8d238da3e999c?source=copy_link)
 - [Central SIEM README](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR#readme)
 - [Target Security Node README](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b#readme)
-- [Backend Engineering Notes](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md)
-
+- [Backend Engineering Notes](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDSCOLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md) 
+- Architecture Decision Records
+- API Documentation
+- Deployment Guide
+- Detection Scenario Rules
+- Demo Scenario Guide
+  
 ---
 
 <div align="center">
