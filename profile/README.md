@@ -220,16 +220,14 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 <img src="./assets/architecture.png" width="900" alt="SENTINEL-OPS System Architecture" />
 </div>
 
-<details>
-<summary><b>▶️ Architecture Flow Animation</b></summary>
-
 <div align="center">
-  <img src="./assets/infra_line.gif" width="950"
-       alt="SENTINEL-OPS Architecture Flow" />
+<img src="./assets/architecture-nonicon.png" width="900" alt="SENTINEL-OPS System Architecture" />
 </div>
 
-</details>
 
+<details>
+  
+<summary><b>▶️ Architecture Flow</b></summary>
 
 ### Architecture Flow
 1. **Detect & Collect** — Target 서버에서 WAF·WAS·Falco·K8s Audit 이벤트를 생성하고 OTel Collector로 수집합니다.
@@ -238,6 +236,12 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 4. **Correlate** — Threshold·Sequence 시나리오를 평가해 연관 이벤트를 하나의 인시던트로 병합합니다.
 5. **Store & Analyze** — PostgreSQL은 운영 데이터, OpenSearch는 검색·포렌식, ClickHouse는 대량 분석, Redis는 상태·세션을 담당합니다.
 6. **Visualize & Notify** — FastAPI와 React 대시보드가 결과를 제공하고 AI 리포트 및 Slack·Discord 알림을 전송합니다.
+<div align="center">
+  <img src="./assets/infra_line.gif" width="950"
+       alt="SENTINEL-OPS Architecture Flow" />
+</div>
+
+</details>
 
 <details>
 <summary><b>🔍 Detailed Processing Pipeline</b></summary>
