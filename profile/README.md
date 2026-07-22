@@ -251,8 +251,6 @@ MITRE ATT&CK 전술/기법 매트릭스를 확인하고, 셀을 클릭하면 해
   <img src="./assets/ATT&CK_white" width="950" alt="Admin Dashboard" />
 </div>
 
-<details>
-<summary><b>WAF / WAS / Falco / K8s Audit 상세 화면</b></summary>
 <br/>
 
 ### Infrastructure
@@ -275,8 +273,9 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 </div>
 
 <details>
-<summary><b>WAF / WAS / Falco / K8s Audit 상세 화면</b></summary>
+<summary><b>🌐 WAF /📄 WAS /📦 Falco /☸️ K8s Audit 상세 화면</b></summary>
 <br/>
+ 
 
 | 화면 | 주요 정보 |
 | --- | --- |
