@@ -58,9 +58,9 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 - [⚖️ Challenges & Solutions](#challenges-solutions)
 - [✨ Key Features](#-key-features)
 - [🚨 Attack Detection Scenario](#-attack-detection-scenario)
+- [🖥️ Screenshots](#screenshots)
 - [🏗️ System Architecture](#system-architecture)
 - [🗃️ Data Architecture](#data-architecture)
-- [🖥️ Screenshots](#screenshots)
 - [🛠️ Tech Stack](#tech-stack)
 - [📦 Repositories](#-repositories)
 - [📗 API](#-api-상세-문서)
@@ -211,109 +211,10 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 | 📢 Response | Critical 인시던트 생성 및 Slack 알림 |
 
 > 개별적으로 분리된 4개 보안 이벤트를 하나의 Critical 인시던트로 재구성합니다.
-
----
-
-<a id="system-architecture"></a>
-## 🏗️ System Architecture
-
-<div align="center">
-<img src="./assets/architecture.png" width="900" alt="SENTINEL-OPS System Architecture" />
-</div>
-
-<div align="center">
-<img src="./assets/architecture-nonicon.png" width="900" alt="SENTINEL-OPS System Architecture" />
-</div>
-
-
-<details>
-  
-<summary><b>▶️ Architecture Flow</b></summary>
-
-### Architecture Flow
-1. **Detect & Collect** — Target 서버에서 WAF·WAS·Falco·K8s Audit 이벤트를 생성하고 OTel Collector로 수집합니다.
-2. **Transfer** — Target Collector가 이벤트에 `log.source`를 부여하고 Central SIEM으로 OTLP 전송합니다.
-3. **Normalize** — 중복 제거, 소스별 파싱, ECS 정규화, GeoIP·Kubernetes 메타데이터 보강을 수행합니다.
-4. **Correlate** — Threshold·Sequence 시나리오를 평가해 연관 이벤트를 하나의 인시던트로 병합합니다.
-5. **Store & Analyze** — PostgreSQL은 운영 데이터, OpenSearch는 검색·포렌식, ClickHouse는 대량 분석, Redis는 상태·세션을 담당합니다.
-6. **Visualize & Notify** — FastAPI와 React 대시보드가 결과를 제공하고 AI 리포트 및 Slack·Discord 알림을 전송합니다.
-<div align="center">
-  <img src="./assets/infra_line.gif" width="950"
-       alt="SENTINEL-OPS Architecture Flow" />
-</div>
-
-</details>
-
-<details>
-<summary><b>🔍 Detailed Processing Pipeline</b></summary>
-<br/>
-
-```text
-[Target 플레인 — k3d 클러스터]
-  Juice Shop (보호 대상)
-  ├─ nginx 사이드카 ──── WAS raw access log
-  ├─ FastAPI WAF 센서 ── 시그니처 탐지 alert (OTLP push)
-  ├─ Falco (eBPF) ────── 커널 런타임 이벤트
-  └─ K8s Audit Policy ── 컨트롤플레인 행위 기록
-            │
-            ▼  OTel Collector (filelog tail + OTLP 수신 → 태깅 → 중앙 전송)
-            │
-   ═════ OTLP gRPC ═════
-            │
-[Central SIEM 플레인 — GCP VM / docker-compose]
-  Traefik (단일 진입점, forwardAuth 인증 게이트)
-            ▼
-  Gateway OTel Collector ──→ Kafka (소스별 토픽: events.was/waf/falco/audit)
-            ▼
-  Normalizer (dedupe → parse → 정규화 → 심각도 → enrich) ──→ events.normalized
-            ▼                                    ▼
-  Correlation Engine (시나리오 YAML)        Data Prepper → OpenSearch
-            ▼                               Kafka Engine → ClickHouse
-  PostgreSQL (인시던트)
-            ▼
-  Platform API (FastAPI, REST 폴링) ──→ React 대시보드
-```
-</details>
-
----
-
-<a id="data-architecture"></a>
-## 🗃️ Data Architecture
-
-<div align="center">
-<img src="./assets/erd.png" width="950" alt="SENTINEL-OPS ERD" />
-</div>
-
-| 저장소 | 역할 |
-| --- | --- |
-| **PostgreSQL 16** | 사용자, 보호 대상, 시나리오 룰, 인시던트, 차단·감사 이력 |
-| **OpenSearch 2.19** | 정규화 이벤트 검색·집계 및 원본 포렌식 |
-| **ClickHouse 26.4** | 대량 로그 컬럼형 분석과 Top-N 집계 |
-| **Redis 7** | 중복 제거, 상관분석 윈도우·쿨다운, 로그인 세션 |
-
-<details>
-<summary><b>PostgreSQL 주요 테이블</b></summary>
-<br/>
-
-| 테이블 | 역할 |
-| --- | --- |
-| `users` | 관리자·조회자 계정 및 권한 |
-| `targets` | 보호 대상 애플리케이션 |
-| `allow_list` | 전역 또는 Target 단위 예외 IP |
-| `scenario_rules` | 상관분석 시나리오 룰 |
-| `incidents` | 보안 사고 상태·등급·판정 정보 |
-| `incident_events` | 인시던트와 원본 이벤트 매핑 |
-| `banned_ips` | IP 차단·해제 이력 |
-| `audit_logs` | 관리자 행위 감사 로그 |
-| `alert_configs` | Slack·Discord 알림 설정 |
-| `log_policies` | 로그 등급별 보존 정책 |
-| `ai_trend_report_cache` | AI 트렌드 리포트 캐시 |
-
-</details>
-
----
-
 <a id="screenshots"></a>
+
+---
+
 ## 🖥️ Screenshots
 
 ### Overview
@@ -485,6 +386,107 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 
 
 ---
+
+<a id="system-architecture"></a>
+## 🏗️ System Architecture
+
+<div align="center">
+<img src="./assets/architecture.png" width="900" alt="SENTINEL-OPS System Architecture" />
+</div>
+
+<div align="center">
+<img src="./assets/architecture-nonicon.png" width="900" alt="SENTINEL-OPS System Architecture" />
+</div>
+
+
+<details>
+  
+<summary><b>▶️ Architecture Flow</b></summary>
+
+### Architecture Flow
+1. **Detect & Collect** — Target 서버에서 WAF·WAS·Falco·K8s Audit 이벤트를 생성하고 OTel Collector로 수집합니다.
+2. **Transfer** — Target Collector가 이벤트에 `log.source`를 부여하고 Central SIEM으로 OTLP 전송합니다.
+3. **Normalize** — 중복 제거, 소스별 파싱, ECS 정규화, GeoIP·Kubernetes 메타데이터 보강을 수행합니다.
+4. **Correlate** — Threshold·Sequence 시나리오를 평가해 연관 이벤트를 하나의 인시던트로 병합합니다.
+5. **Store & Analyze** — PostgreSQL은 운영 데이터, OpenSearch는 검색·포렌식, ClickHouse는 대량 분석, Redis는 상태·세션을 담당합니다.
+6. **Visualize & Notify** — FastAPI와 React 대시보드가 결과를 제공하고 AI 리포트 및 Slack·Discord 알림을 전송합니다.
+<div align="center">
+  <img src="./assets/infra_line.gif" width="950"
+       alt="SENTINEL-OPS Architecture Flow" />
+</div>
+
+</details>
+
+<details>
+<summary><b>🔍 Detailed Processing Pipeline</b></summary>
+<br/>
+
+```text
+[Target 플레인 — k3d 클러스터]
+  Juice Shop (보호 대상)
+  ├─ nginx 사이드카 ──── WAS raw access log
+  ├─ FastAPI WAF 센서 ── 시그니처 탐지 alert (OTLP push)
+  ├─ Falco (eBPF) ────── 커널 런타임 이벤트
+  └─ K8s Audit Policy ── 컨트롤플레인 행위 기록
+            │
+            ▼  OTel Collector (filelog tail + OTLP 수신 → 태깅 → 중앙 전송)
+            │
+   ═════ OTLP gRPC ═════
+            │
+[Central SIEM 플레인 — GCP VM / docker-compose]
+  Traefik (단일 진입점, forwardAuth 인증 게이트)
+            ▼
+  Gateway OTel Collector ──→ Kafka (소스별 토픽: events.was/waf/falco/audit)
+            ▼
+  Normalizer (dedupe → parse → 정규화 → 심각도 → enrich) ──→ events.normalized
+            ▼                                    ▼
+  Correlation Engine (시나리오 YAML)        Data Prepper → OpenSearch
+            ▼                               Kafka Engine → ClickHouse
+  PostgreSQL (인시던트)
+            ▼
+  Platform API (FastAPI, REST 폴링) ──→ React 대시보드
+```
+</details>
+
+---
+
+<a id="data-architecture"></a>
+## 🗃️ Data Architecture
+
+<div align="center">
+<img src="./assets/erd.png" width="950" alt="SENTINEL-OPS ERD" />
+</div>
+
+| 저장소 | 역할 |
+| --- | --- |
+| **PostgreSQL 16** | 사용자, 보호 대상, 시나리오 룰, 인시던트, 차단·감사 이력 |
+| **OpenSearch 2.19** | 정규화 이벤트 검색·집계 및 원본 포렌식 |
+| **ClickHouse 26.4** | 대량 로그 컬럼형 분석과 Top-N 집계 |
+| **Redis 7** | 중복 제거, 상관분석 윈도우·쿨다운, 로그인 세션 |
+
+<details>
+<summary><b>PostgreSQL 주요 테이블</b></summary>
+<br/>
+
+| 테이블 | 역할 |
+| --- | --- |
+| `users` | 관리자·조회자 계정 및 권한 |
+| `targets` | 보호 대상 애플리케이션 |
+| `allow_list` | 전역 또는 Target 단위 예외 IP |
+| `scenario_rules` | 상관분석 시나리오 룰 |
+| `incidents` | 보안 사고 상태·등급·판정 정보 |
+| `incident_events` | 인시던트와 원본 이벤트 매핑 |
+| `banned_ips` | IP 차단·해제 이력 |
+| `audit_logs` | 관리자 행위 감사 로그 |
+| `alert_configs` | Slack·Discord 알림 설정 |
+| `log_policies` | 로그 등급별 보존 정책 |
+| `ai_trend_report_cache` | AI 트렌드 리포트 캐시 |
+
+</details>
+
+---
+
+
 
 
 <a id="tech-stack"></a>
