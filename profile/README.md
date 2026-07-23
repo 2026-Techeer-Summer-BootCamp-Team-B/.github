@@ -10,12 +10,8 @@ waf.png, was.png, falco.png, k8s-audit.png
 
 <div align="center">
 
-<!-- 로고가 준비되면 주석을 해제하세요.
-<img src="./assets/logo.png" width="130" alt="SENTINEL-OPS Logo" />
--->
 
-
-
+<img src="./assets/sentinel-ops-logo-512.png" width="70" alt="SENTINEL-OPS Logo" /> 
 
 # SENTINEL-OPS
 
