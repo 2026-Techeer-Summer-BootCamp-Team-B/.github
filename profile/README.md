@@ -578,54 +578,44 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 
 <div align="center">
 <img src="./assets/cadvisor-exporter.png" width="950" alt="User and Target Management Dashboard" />
+  Cadvisor-exporter
 </div>
 
-### Cadvisor-exporter
+
 
 <div align="center">
 <img src="./assets/clickhouse.png" width="950" alt="User and Target Management Dashboard" />
+  Clickhouse
 </div>
 
-### Clickhouse
+
 
 <div align="center">
 <img src="./assets/elasticsearch.png" width="950" alt="User and Target Management Dashboard" />
+  Elasticsearch
 </div>
 
-### Elasticsearch
 
 <div align="center">
 <img src="./assets/kafka.png" width="950" alt="User and Target Management Dashboard" />
+  Kafka
 </div>
 
-### Kafka
 
 <div align="center">
 <img src="./assets/node-exporter.png" width="950" alt="User and Target Management Dashboard" />
+  Node-Exporter
 </div>
-
-### Node-Exporter
 
 <div align="center">
 <img src="./assets/postgre.png" width="950" alt="User and Target Management Dashboard" />
+  Postgre
 </div>
-
-### Postgre
 
 <div align="center">
 <img src="./assets/prometheus.png" width="950" alt="User and Target Management Dashboard" />
+  Prometheus
 </div>
-
-### Prometheus
-
-
-
-
-
-
-
-
-
 
 
 
