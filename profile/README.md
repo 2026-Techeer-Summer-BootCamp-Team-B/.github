@@ -664,12 +664,12 @@ OWASP Juice Shop을 보호 대상으로 구성하고, 자체 FastAPI WAF·WAS·F
 - [Central SIEM README](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR#readme)
 - [Target Security Node README](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b#readme)
 - [Backend Engineering Notes](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md) 
-- Architecture Decision Records
+- [Architecture & Engineering Decisions](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md)
 - [API Documentation](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md#%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%97%B0%EB%8F%99-api)
-- Deployment Guide
-- Detection Scenario Rules
-- Demo Scenario Guide
-  
+- [Deployment Notes](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md#L300-L319)
+- [Detection Scenario Rules](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/servers/correlation-engine/app/scenarios/README.md)
+- [Demo Scenario Guide](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b/blob/main/SECURITY_TOOLS_TESTING.md)
+
 ---
 
 <div align="center">
