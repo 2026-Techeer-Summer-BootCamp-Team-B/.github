@@ -251,6 +251,24 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 </div>
 <br/>
 
+### Attack Map
+
+GeoIP 기반으로 공격 발원지를 지도에서 확인합니다.
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/2b9e02b4-ea4d-4165-bc21-d422bef3fe93" width="950" controls muted loop playsinline autoplay></video>
+</div>
+<br/>
+
+### Custom Dashboard
+
+드래그 앤 드롭으로 위젯을 배치해 나만의 대시보드를 구성합니다.
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/db9d8655-9672-463a-b483-78fc69ce4ae7" width="950" controls muted loop playsinline autoplay></video>
+</div>
+<br/>
+
 
 
 ## 🌐 WAF / 📄 WAS / 📦 Falco / ☸️ K8s Audit
