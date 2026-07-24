@@ -671,8 +671,8 @@ SENTINEL-OPS는 Kubernetes, Kafka, OpenTelemetry, OpenSearch, ClickHouse 등 여
 <tr>
 <th align="center">Role</th>
 <td align="center">Team Leader<br/>Fullstack, DevOps</td>
-<td align="center">Backend, DevOps</td>
-<td align="center">Backend</td>
+<td align="center">Fullstack, DevOps</td>
+<td align="center">Fullstack</td>
 <td align="center">Backend</td>
 <td align="center">Frontend</td>
 </tr>
