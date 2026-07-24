@@ -70,7 +70,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 ## 🎯 Project Overview
 <div align="center">
   
-<video src="https://github.com/user-attachments/assets/0065bc2b-61be-4624-b0f7-6b4150e9f9a3" width="950" controls muted loop playsinline autoplay></video>
+<img src="./assets/ArchTreeDemo.gif" width="950" alt="SENTINEL-OPS Architecture Demo" />
 
 </div>
 
@@ -90,7 +90,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 <div align="center">
 
-<video src="https://github.com/user-attachments/assets/33568575-0c84-4bc4-85aa-af67c1a4f281" width="950" controls muted loop playsinline autoplay></video>
+<img src="./assets/DualMonitorTour.gif" width="950" alt="SENTINEL-OPS Page Demo" />
 
 
 
@@ -220,7 +220,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 전체 로그 수, 위험도, 활성 탐지 소스, 공격 발원지, 최근 이벤트와 상관 흐름을 한 화면에서 확인합니다.
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/9803ca43-6b53-420e-9fbc-d03415c6e59e" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/OverviewDemo.gif" width="950" alt="Overview Dashboard" />
 </div>
 <br/>
 
@@ -228,7 +228,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 연관 이벤트를 시간순 공격 스토리라인으로 확인하고, MITRE ATT&CK 태그·상태·정오답 판정을 관리합니다.
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/0c33f690-a679-4777-ad3b-b39fd59d4988" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/IncidentDemo.gif" width="950" alt="Incident Dashboard" />
 </div>
 <br/>
 
@@ -237,7 +237,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 MITRE ATT&CK 전술/기법 매트릭스를 확인하고, 셀을 클릭하면 해당 기법에서 탐지된 실제 인시던트 목록을 조회할 수 있습니다.
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/bc1a0e26-7898-4fc8-b7c1-be7f01d75bc9" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/AttackDemo.gif" width="950" alt="ATT&CK Dashboard" />
 </div>
 <br/>
 
@@ -247,7 +247,7 @@ MITRE ATT&CK 전술/기법 매트릭스를 확인하고, 셀을 클릭하면 해
 Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전체 보안 파이프라인의 상태를 확인하고, 사용자·보호 대상·예외 IP·시나리오 룰·알림 등급·보존 정책을 통합 관리합니다.
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/5d8d0808-1017-461a-b298-574af5c4caca" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/InfraAdminDemo.gif" width="950" alt="Infrastructure and Admin Dashboard" />
 </div>
 <br/>
 
@@ -256,7 +256,7 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 GeoIP 기반으로 공격 발원지를 지도에서 확인합니다.
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/2b9e02b4-ea4d-4165-bc21-d422bef3fe93" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/MapDemo.gif" width="950" alt="Attack Map" />
 </div>
 <br/>
 
@@ -265,7 +265,7 @@ GeoIP 기반으로 공격 발원지를 지도에서 확인합니다.
 드래그 앤 드롭으로 위젯을 배치해 나만의 대시보드를 구성합니다.
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/db9d8655-9672-463a-b483-78fc69ce4ae7" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/CustomDemo.gif" width="950" alt="Custom Dashboard" />
 </div>
 <br/>
 
@@ -289,28 +289,28 @@ GeoIP 기반으로 공격 발원지를 지도에서 확인합니다.
 
 ### WAF
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/d08e7a00-0bee-4be7-85be-fad200636901" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/WafDemo.gif" width="950" alt="WAF Page" />
 </div>
 <br/>
 
 ### WAS
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/d4c3d3ee-f545-4131-8918-3f22b851ec30" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/WasDemo.gif" width="950" alt="WAS Page" />
 </div>
 <br/>
 
 ### FALCO
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/0fea80fd-0f9a-46d9-ad09-9b9dd00c03b5" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/FalcoDemo.gif" width="950" alt="Falco Page" />
 </div>
 <br/>
 
 ### K8S Audit
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/70f4097f-3649-4540-adba-187686336eb6" width="950" controls muted loop playsinline autoplay></video>
+  <img src="./assets/K8sDemo.gif" width="950" alt="K8s Audit Page" />
 </div>
 
 </details>
