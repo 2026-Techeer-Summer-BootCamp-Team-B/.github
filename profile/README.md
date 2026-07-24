@@ -61,6 +61,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 - [🛠️ Tech Stack](#tech-stack)
 - [📊 Monitoring](#monitoring)
 - [📦 Repositories](#-repositories)
+- [🧪 직접 테스트해보기](#-직접-테스트해보기)
 - [👥 Team B](#-team-members)
 - [📚 Documentation](#-documentation)
   
@@ -69,7 +70,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 ## 🎯 Project Overview
 <div align="center">
   
-<img src="./assets/sentinel-ops-architecture-demo.gif" width="950" alt="sentinel-ops-architecture-demo" />
+<video src="./assets/ArchTreeDemo.mp4" width="950" controls muted loop playsinline autoplay></video>
 
 </div>
 
@@ -89,7 +90,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 
 <div align="center">
 
-<img src="./assets/DualMonitorTour.gif" width="950" alt="SENTINEL-OPS Page Demo" />
+<video src="./assets/DualMonitorTour.mp4" width="950" controls muted loop playsinline autoplay></video>
 
 
 
@@ -219,34 +220,16 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 전체 로그 수, 위험도, 활성 탐지 소스, 공격 발원지, 최근 이벤트와 상관 흐름을 한 화면에서 확인합니다.
 
 <div align="center">
-  <img src="./assets/overview-white.png" width="950" alt="Overview Dashboard" />
+  <video src="./assets/OverviewDemo.mp4" width="950" controls muted loop playsinline autoplay></video>
 </div>
-
-<details>
-<summary><b>Dark Mode</b></summary>
-
-<div align="center">
-  <img src="./assets/overview-black.png" width="950" alt="Overview Dashboard" />
-</div>
-
-</details>
 <br/>
 
 ### Incident
 
 연관 이벤트를 시간순 공격 스토리라인으로 확인하고, MITRE ATT&CK 태그·상태·정오답 판정을 관리합니다.
 <div align="center">
-  <img src="./assets/incident-white.png" width="950" alt="Incident Dashboard" />
+  <video src="./assets/IncidentDemo.mp4" width="950" controls muted loop playsinline autoplay></video>
 </div>
-
-<details>
-<summary><b>Dark Mode</b></summary>
-
-<div align="center">
-  <img src="./assets/incident-black.png" width="950" alt="Incident Dashboard" />
-</div>
-
-</details>
 <br/>
 
 ### ATT&CK
@@ -254,84 +237,18 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 MITRE ATT&CK 전술/기법 매트릭스를 확인하고, 셀을 클릭하면 해당 기법에서 탐지된 실제 인시던트 목록을 조회할 수 있습니다.
 
 <div align="center">
-  <img src="./assets/attack-white.png" width="950" alt="ATT&CK Dashboard" />
+  <video src="./assets/AttackDemo.mp4" width="950" controls muted loop playsinline autoplay></video>
 </div>
-
-<details>
-<summary><b>Dark Mode</b></summary>
-
-<div align="center">
-   <img src="./assets/attack-black.png" width="950" alt="ATT&CK Dashboard" />
-</div>
-
-</details>
 <br/>
 
 
-### Infrastructure
-Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전체 보안 파이프라인의 상태를 확인합니다.
+### Infrastructure & Admin / Audit
 
-
-<div align="center">
-  <img src="./assets/Infrastructure-white.png" width="950" alt="Infrastructure Dashboard" />
-</div>
-
-<details>
-<summary><b>Dark Mode</b></summary>
+Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전체 보안 파이프라인의 상태를 확인하고, 사용자·보호 대상·예외 IP·시나리오 룰·알림 등급·보존 정책을 통합 관리합니다.
 
 <div align="center">
-  <img src="./assets/Infrastructure-black.png" width="950" alt="Infrastructure Dashboard" />
+  <video src="./assets/InfraAdminDemo.mp4" width="950" controls muted loop playsinline autoplay></video>
 </div>
-
-</details>
-<br/>
-
-### Admin / Audit
-
-사용자·보호 대상·예외 IP·시나리오 룰·알림 등급·보존 정책을 통합 관리합니다.
-
- #### 탐지·정책
-
-<div align="center">
-<img src="./assets/admin1-white.png" width="950" alt="User and Target Management Dashboard" />
-</div>
-
-#### 대상·알림
-
- <div align="center">
-   <img src="./assets/admin2-white.png" width="950" alt="Security Policy Management Dashboard" />
- </div>
-
- ####  감사 로그
-
-<div align="center">
-  <img src="./assets/admin3-white.png" width="950" alt="Audit and Notification Settings Dashboard" />
-</div>
-
-<details>
-<summary><b>Dark Mode</b></summary>
-<br/>
-
- #### 탐지·정책
-
-<div align="center">
-  <img src="./assets/admin1-black.png" width="950" alt="User and Target Management Dark Dashboard" />
-</div>
-
- #### 대상·알림
-
-<div align="center">
-  <img src="./assets/admin2-black.png" width="950" alt="Security Policy Management Dark Dashboard" />
-</div>
-
-### 감사 로그
-
-<div align="center">
-  <img src="./assets/admin3-black.png" width="950" alt="Audit and Notification Settings Dark Dashboard" />
-</div>
-
-</details>
-
 <br/>
 
 
@@ -353,31 +270,30 @@ Kubernetes 클러스터 구조와 Kafka Consumer Lag, DLQ, 수집 지연 등 전
 | **K8s Audit** | Verb, 리소스, RBAC 변경, 사용자·ServiceAccount |
 
 ### WAF
-<p align="center">
-<img src="./assets/waf-white.png" width="48%" alt="WAF Page" />
-<img src="./assets/waf-black.png" width="48%" alt="WAF Page" />
-</p>
+<div align="center">
+  <video src="./assets/WafDemo.mp4" width="950" controls muted loop playsinline autoplay></video>
+</div>
+<br/>
 
 ### WAS
 
-<p align="center">
-<img src="./assets/was-white.png" width="48%" alt="was Page" />
-<img src="./assets/was-black.png" width="48%" alt="was Page" />
-</p>
+<div align="center">
+  <video src="./assets/WasDemo.mp4" width="950" controls muted loop playsinline autoplay></video>
+</div>
+<br/>
 
 ### FALCO
 
-<p align="center">
-<img src="./assets/falco-white.png" width="48%" alt="falco Page" />
-<img src="./assets/falco-black.png" width="48%" alt="falco Page" />
-</p>
+<div align="center">
+  <video src="./assets/FalcoDemo.mp4" width="950" controls muted loop playsinline autoplay></video>
+</div>
+<br/>
 
 ### K8S Audit
 
-<p align="center">
-<img src="./assets/k8d-white.png" width="48%" alt="k8d Page" />
-<img src="./assets/k8d-black.png" width="48%" alt="k8d Page" />
-</p>
+<div align="center">
+  <video src="./assets/K8sDemo.mp4" width="950" controls muted loop playsinline autoplay></video>
+</div>
 
 </details>
 
@@ -657,6 +573,24 @@ OWASP Juice Shop을 보호 대상으로 구성하고, 자체 FastAPI WAF·WAS·F
 > 각 저장소의 설치 방법, 환경 변수, 디렉터리 구조와 세부 구현은 해당 저장소의 README에서 관리합니다. 이 Organization README는 전체 프로젝트의 목적과 두 저장소의 관계를 설명하는 통합 소개 페이지입니다.
 
 
+
+---
+
+## 🧪 직접 테스트해보기
+
+SENTINEL-OPS를 직접 체험해볼 수 있는 두 가지 주소입니다.
+
+| 구분 | 주소 | 설명 |
+| --- | --- | --- |
+| 🚀 SENTINEL-OPS Dashboard | [dashboard-phi-ten.vercel.app](https://dashboard-phi-ten.vercel.app/) | 실시간 로그·인시던트·상관분석 결과를 확인하는 SIEM 대시보드 |
+| 💥 공격 더미 생성기 | [35.216.79.173:8900](http://35.216.79.173:8900) | WAF·WAS·Falco·K8s Audit 계층의 공격 시나리오를 발생시키는 테스트 도구 |
+
+### 테스트 방법
+1. [SENTINEL-OPS Dashboard](https://dashboard-phi-ten.vercel.app/)에 접속해 Overview 화면을 열어둡니다.
+2. [공격 더미 생성기](http://35.216.79.173:8900)에서 원하는 공격 시나리오(SQL Injection, XSS, 비정상 셸 실행, RBAC 변경 시도 등)를 실행합니다.
+3. 몇 초 내로 대시보드의 Overview · Incident · ATT&CK 화면에서 해당 공격이 하나의 인시던트로 상관분석되어 나타나는 것을 확인할 수 있습니다.
+
+> ⚠️ 공격 더미 생성기는 테스트용 Target 서버(OWASP Juice Shop 기반)로만 트래픽을 보내며, 실제 서비스에는 영향을 주지 않습니다.
 
 ---
 ## 👥 Team Members
