@@ -61,7 +61,7 @@ WAS · WAF · Falco · Kubernetes Audit 로그를 실시간으로 수집하고,<
 - [🛠️ Tech Stack](#tech-stack)
 - [📊 Monitoring](#monitoring)
 - [📦 Repositories](#-repositories)
-- [🧪 직접 테스트해보기](#-직접-테스트해보기)
+- [🧪 Live Demo](#-live-demo)
 - [👥 Team B](#-team-members)
 - [📚 Documentation](#-documentation)
   
@@ -606,7 +606,7 @@ OWASP Juice Shop을 보호 대상으로 구성하고, 자체 FastAPI WAF·WAS·F
 
 ---
 
-## 🧪 직접 테스트해보기
+## 🧪 Live Demo
 
 SENTINEL-OPS를 직접 체험해볼 수 있는 두 가지 주소입니다.
 
