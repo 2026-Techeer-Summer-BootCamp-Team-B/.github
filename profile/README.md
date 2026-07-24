@@ -689,7 +689,7 @@ SENTINEL-OPS는 Kubernetes, Kafka, OpenTelemetry, OpenSearch, ClickHouse 등 여
 - [API Documentation](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md#%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%97%B0%EB%8F%99-api)
 - [Deployment Notes](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/docs/BACKEND_ENGINEERING_NOTES.md#L300-L319)
 - [Detection Scenario Rules](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/IDS-COLLECTOR/blob/main/servers/correlation-engine/app/scenarios/README.md)
-- [Demo Scenario Guide](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b/blob/main/SECURITY_TOOLS_TESTING.md)
+- [Scenario Guide](https://github.com/2026-Techeer-Summer-BootCamp-Team-B/Techeer-12th-b/blob/main/SECURITY_TOOLS_TESTING.md)
 
 ---
 
