@@ -269,6 +269,18 @@ GeoIP 기반으로 공격 발원지를 지도에서 확인합니다.
 </div>
 <br/>
 
+### 로그 수집 방법
+
+SENTINEL-OPS가 로그를 수집하는 방법은 두 가지입니다.
+
+1. **Juice Shop 직접 공격** — Kubernetes 내에 배포된 [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)은 임의로 해킹이 가능하도록 취약점을 심어둔 웹 애플리케이션입니다. 이 사이트에서 마우스 클릭 몇 번만으로도 SQLi·XSS 등의 공격을 수행할 수 있고, 그 즉시 WAF·WAS·Falco·K8s Audit 로그가 수집됩니다.
+2. **공격 더미 생성기 사용** — 저희가 직접 만든 공격 더미 생성기로 다양한 공격 시나리오를 원클릭으로 발생시켜 로그를 수집할 수 있습니다.
+
+<p align="center">
+<img src="./assets/JuiceShopDemo.gif" width="48%" alt="Juice Shop Attack Demo" />
+<img src="./assets/DummyGeneratorDemo.gif" width="48%" alt="Attack Dummy Generator Demo" />
+</p>
+
 
 
 ## 🌐 WAF / 📄 WAS / 📦 Falco / ☸️ K8s Audit
